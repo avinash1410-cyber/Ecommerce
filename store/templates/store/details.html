@@ -1,0 +1,25 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<h1>Welcome in details Page</h1>
+<!--<h1>{{ obj.id }}</h1>-->
+
+<!--name = models.CharField(max_length=200)-->
+<!--	price = models.FloatField()-->
+<!--	digital = models.BooleanField(default=False,blank=True)-->
+<!--	image = models.ImageField(null=True, blank=True)-->
+
+<!--def (self):-->
+
+
+	<div class="row">
+        <div class="card">
+          <img src="{{ obj.imageURL }}" alt="John" style="width:100%">
+          <h1>{{obj.name}}</h1>
+          <p>{{obj.price}}</p>
+          <button data-product="{{obj.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Buy Now</button>
+          <button data-product="{{obj.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+        </div>
+	</div>
+
+{% endblock content %}
